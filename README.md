@@ -167,3 +167,25 @@ fun prepare(vararg messages: String) {
 }
 ```
 
+
+## functions inside function
+
+See this code:
+
+```kotlin
+package tests
+
+fun main() {
+    fun p1(message: String) {
+        print(message)
+
+        fun p2(message: String) {
+            println(message)
+        }
+        p2(" <<<<<<<<<<<<<<<<<<")
+    }
+    p1("Hello, World!")
+}
+```
+
+This code works, but keep in mind that is not possible to call p2("message") outside p1(message) function.
