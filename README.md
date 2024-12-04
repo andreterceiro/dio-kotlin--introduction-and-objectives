@@ -16,3 +16,8 @@ k.php index
 ```
 
 Observation: the directory of this script is on the PATH environment variable of my system.
+
+
+## Tests
+
+I will create some files related who is teached in the videos in the "tests" directory.
