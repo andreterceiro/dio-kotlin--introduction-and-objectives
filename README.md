@@ -61,3 +61,17 @@ fun multiply(a: Int, b: Int): Int = a * b
 ```
 
 As you could saw in the above line, it was not necessary to specify the return. The function hasn't the keyword "return". The return is implicit.
+
+You can specify the name of the parameters in the invocation of the function, as you do in Python, see mainly the invocation of the function log() (log(message = "Mensagem de log", prefix = "Info")):
+
+```kotlin
+package tests
+
+fun main() {
+    log(message = "Mensagem de log", prefix = "Info")
+}
+
+fun log(message: String, prefix: String) {
+    println("[$prefix]: $message")
+}
+```
