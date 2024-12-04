@@ -36,3 +36,14 @@ fun main() {
 ```
 
 In Kotlin you can specify the return of a function, do not specify, and when specify, you can define that the return is "Unit" (whatever). If you do not define, is the same as define as "Unit". Please see the examples in the directory "tests".
+
+You can specify a default value of a function parameter this way (example):
+```kotlin
+package tests
+
+fun p(message: String, level: String = "info") {
+    print("[$level] $message");
+}
+```
+
+In the previous example you can see also how to interpolate varibles and strings.
