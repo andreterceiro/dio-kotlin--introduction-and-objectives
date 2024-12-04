@@ -21,3 +21,16 @@ Observation: the directory of this script is on the PATH environment variable of
 ## Tests
 
 I will create some files related who is teached in the videos in the "tests" directory.
+
+
+## Comments about the tests and the videos
+
+- The functions **print()** and **println()** are available.
+- You can define a package without relation with the directory structure. In the next example, the directory of the file is "tests":
+```Kotlin
+package banana
+
+fun main() {
+    print("Hello world")
+}
+```
