@@ -34,3 +34,5 @@ fun main() {
     print("Hello world")
 }
 ```
+
+In Kotlin you can specify the return of a function, do not specify, and when specify, you can define that the return is "Unit" (whatever). If you do not define, is the same as define as "Unit". Please see the examples in the directory "tests".
