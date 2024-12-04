@@ -96,3 +96,38 @@ if you try to generate the jar file with `kotlinc`, these errors will occur:
 ![errors if you do not specify the types](images/errors-if-you-dont-specify-the-types.png)
 
 See, the errors are related of the types are not specified. Both of the parameters as the return type. But didn't tell me that I can omit the return type, right? Yes, right, but if you do not return anything kkkk.
+
+
+## varargs
+
+In my machine I have this version of Kotlinc (I got the version using the command `kotlinc -v`):
+
+```
+info: kotlinc-jvm 2.1.0 (JRE 21.0.4+7-Ubuntu-1ubuntu220.04)
+```
+
+ And the code related to this section didn't work as I expected. So I executed the code in Kotlin Playground, please see [this link](https://pl.kotl.in/0ZuDvkzKg)
+
+You can play the code there.
+
+This is the code:
+
+```kotlin
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+package tests
+
+fun main() {
+    printAll("hi", "José", "da Silva")
+}
+
+fun printAll(vararg messages: String) {
+    for (message in messages) {
+        println(message)
+    }
+}
+```
+
+See the **varag** in the printAll function and the invocation of this function that have 2 paramenters with only 1 paarmenter. Why? Because **vararg** in the parameter. Messages now is an array of strings.
