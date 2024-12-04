@@ -75,3 +75,24 @@ fun log(message: String, prefix: String) {
     println("[$prefix]: $message")
 }
 ```
+
+Now see this similar code:
+
+```
+package tests
+
+fun main() {
+    log(message = "Mensagem de log", prefix = "Info")
+}
+
+fun log(message, prefix) {
+    println("[$prefix]: $message")
+    return 0
+}
+```
+
+if you try to generate the jar file with `kotlinc`, these errors will occur:
+
+![errors if you do not specify the types](images/errors-if-you-dont-specify-the-types.png)
+
+See, the errors are related of the types are not specified. Both of the parameters as the return type. But didn't tell me that I can omit the return type, right? Yes, right, but if you do not return anything kkkk.

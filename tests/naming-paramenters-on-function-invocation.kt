@@ -4,6 +4,7 @@ fun main() {
     log(message = "Mensagem de log", prefix = "Info")
 }
 
-fun log(message: String, prefix: String) {
+fun log(message, prefix) {
     println("[$prefix]: $message")
+    return 0
 }
