@@ -189,3 +189,68 @@ fun main() {
 ```
 
 This code works, but keep in mind that is not possible to call p2("message") outside p1(message) function.
+
+
+## var and val
+
+Var is **mutable** and val is **immutable**. If you try to change a val variable, you will get an error.
+
+You can't print and val or var that wasn't initialized. This next code will trhouw an error:
+
+```kotlin
+package tests
+
+fun main() {
+    var a
+    print(a)
+}
+```
+
+Another question: Kotlin can infer the type of a variable, so you don't need to specify it. In the next code, the variable "a" is a string:
+
+```kotlin
+package tests
+
+fun main() {
+    var a = "test"
+    print(a)
+}
+```
+
+But you can specify the type if you want:
+
+```kotlin
+package tests
+
+fun main() {
+    var a:String = "test"
+    print(a)
+}
+```
+
+The last comment is related to **"val"**. You can't change a val. The next code will throw an error:
+```kotlin
+package tests
+
+fun main() {
+    val a = "test 1"
+    a = "test 2"
+    print(a)
+}
+```
+
+But if you do not initialize the val, you can set a value. The next code will work:
+
+```kotlin
+package tests
+
+fun main() {
+    val a: String
+    a = "test 2"
+    print(a)
+}
+```
+
+But only works because we seeted the type, the type was not infered by Kotlin. How to infer if we do not have a value? = error.
+
+
