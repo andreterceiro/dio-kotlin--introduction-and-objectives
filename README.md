@@ -131,3 +131,39 @@ fun printAll(vararg messages: String) {
 ```
 
 See the **varag** in the printAll function and the invocation of this function that have 2 paramenters with only 1 paarmenter. Why? Because **vararg** in the parameter. Messages now is an array of strings.
+
+But pay atention, this next code will not work:
+
+```kotlin
+package tests
+
+fun main() {
+    printAll(["hi", "José", "da Silva"])
+}
+
+fun printAll(vararg messages: String) {
+    for (message in messages) {
+        println(message)
+    }
+}
+```
+
+The difference between the two previous codes is how you call printAll function. In the first, you pass several Strings and it works because of **varagr**. In the second you are passing an array of strings. Are different things. And if a vararg after the call of the function (even in the first code) is transformed in an array even if I passed several strings (and not an array) in the call of the function, how to pass a parameter received as vararg (an array inside the function) to another function that also receives a vararg? Usind the <b>*</b> operator, [see](https://pl.kotl.in/bwDb2BDeN):
+```kotlin
+package tests
+
+fun main() {
+    prepare("hi", "José", "da Silva")
+}
+
+fun printAll(vararg messages: String) {
+    for (message in messages) {
+        println(message)
+    }
+}
+
+fun prepare(vararg messages: String) {
+    printAll(*messages)
+}
+```
+
