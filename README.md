@@ -47,3 +47,17 @@ fun p(message: String, level: String = "info") {
 ```
 
 In the previous example you can see also how to interpolate varibles and strings.
+
+Kotlin also have inline functions, see:
+
+```kotlin
+package tests
+
+fun main() {
+    print(multiply(2, 3))
+}
+
+fun multiply(a: Int, b: Int): Int = a * b
+```
+
+As you could saw in the above line, it was not necessary to specify the return. The function hasn't the keyword "return". The return is implicit.
