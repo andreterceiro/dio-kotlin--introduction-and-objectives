@@ -267,3 +267,16 @@ fun main() {
     a = null // <= Error if you try to assign null to a non-nullable variable
 }
 ```
+
+But you can set a value to `null` if you declare the variable as nullable, like this:
+
+```kotlin
+package tests
+
+fun main() {
+    var a:String? = "banana"
+    print(a)
+    a = null
+}```
+
+The difference occurs in the question mark after the type in the variable declaration.
