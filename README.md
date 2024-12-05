@@ -316,3 +316,28 @@ fun multiply(num1: Int, x: Int?): Int {
 In this code above, we are checking if a variable have a null value and in this case setting its value to 1. You can't multiply a null.
 
 **Atention:** the resuting error is a compilation error, not a runtime error.
+
+Other interesting example is the next examples, see:
+
+```kotlin
+package tests
+
+fun main() {
+    var str:String = "oi"
+    print(str?.length ?: 0)
+}
+
+```
+
+In this previous example, is printed "2"
+
+```kotlin
+package tests
+
+fun main() {
+    var str: String? = null
+    print(str?.length ?: 0)
+}
+```
+
+In this previous example, is printed "0"
