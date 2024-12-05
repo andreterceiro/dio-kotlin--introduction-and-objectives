@@ -341,3 +341,29 @@ fun main() {
 ```
 
 In this previous example, is printed "0"
+
+
+## Classes
+
+First see this simple example:
+
+```
+package tests
+
+class Customer
+
+fun main() {
+    var customer = Customer()
+    print(customer)
+}
+```
+
+Prints as example "tests.Customer@659e0bfd".
+
+Details:
+
+- Here you see how simple is to create a class in Kotlin. Example "class Customer"
+- If you need to print, you can print the object, not the class.
+- To Instantiate the class:
+    - You **don't** have to use the **new** keywork;
+    - You have to use the **()** to instantiate the class. If the constructor receives or not  parameters does not make difference.
