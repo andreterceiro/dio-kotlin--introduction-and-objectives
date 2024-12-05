@@ -406,15 +406,24 @@ class MutableStack<E>(vararg items: E) {
 
 fun main() {
     var integersStack = MutableStack(1, 2, 3)
-    print(integersStack)
-    print("\n")
+    println(integersStack)
     
     integersStack.pop()
     println(integersStack)
-    print("\n")    
     
     integersStack.pop()
-    print(integersStack)
+    println(integersStack)
+    
+    var stringStack = MutableStack("A", "B", "C")
+    
+    println(stringStack)
+    
+    stringStack.pop()
+    println(stringStack)
+    
+    stringStack.pop()
+    print(stringStack)
+    
 }
 ```
 
