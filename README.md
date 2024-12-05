@@ -428,3 +428,5 @@ fun main() {
 ```
 
 Maybe due the version of my Kotlin compiler, in my machine only the last print of the same variable is sent to STDOUT, so to see the execution this script, please see the execution in [Kotlin playground](https://pl.kotl.in/7tYiuLC8h).
+
+As you can see in the test, the type of the element in the stack is generic (he class is using generics kkk). Related of generics this is the main thing to observed. **varag** as exemple we already commented previously.
