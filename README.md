@@ -385,4 +385,37 @@ See the declaration of the class. In the sabe line we specify that the construct
 
 Remember these important points:
 - A property can be a **val** (immutable) and have no initial value. Then this value can be setted **1 time** in the constructor and never be changed. If it was a **var**, it can be changed in future;
-- To Kotin infer the type of the variable (or porperty) name you must specify a initial value (at least an empyt string - ""). Or you can specify the type like I did. 
+- To Kotin infer the type of the variable (or porperty) name you must specify a initial value (at least an empyt string - ""). Or you can specify the type like I did.
+
+
+## Generics
+
+See in the next example the use of <>:
+
+```kotlin
+package tests
+
+class MutableStack<E>(vararg items: E) {
+    private val elements = items.toMutableList()
+
+    fun pop() = elements.removeAt(elements.size - 1)
+
+    override fun toString(): String = "Mutable stack (${elements.joinToString()})"
+}
+
+
+fun main() {
+    var integersStack = MutableStack(1, 2, 3)
+    print(integersStack)
+    print("\n")
+    
+    integersStack.pop()
+    println(integersStack)
+    print("\n")    
+    
+    integersStack.pop()
+    print(integersStack)
+}
+```
+
+Maybe due the version of my Kotlin compiler, in my machine only the last print of the same variable is sent to STDOUT, so to see the execution this script, please see the execution in [Kotlin playground](https://pl.kotl.in/7tYiuLC8h).
