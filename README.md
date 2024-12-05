@@ -367,3 +367,18 @@ Details:
 - To Instantiate the class:
     - You **don't** have to use the **new** keywork;
     - You have to use the **()** to instantiate the class. If the constructor receives or not  parameters does not make difference.
+
+To specify a constuctor that only set values to the properties is simple, see:
+
+```kotlin
+package tests
+
+class Customer(val id: Int, var name: String)
+
+fun main() {
+    var customer = Customer(1, "João")
+    print(customer.id)
+}
+```
+
+See the declaration of the class. In the sabe line we specify that the constructor will receive 2 parameters and this parameters will be setted to properties.
