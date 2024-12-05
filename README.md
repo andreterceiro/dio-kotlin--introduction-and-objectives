@@ -294,3 +294,23 @@ fun main() {
 ```
 
 In this example we used inference to define the type of the variable "a", but the error still occur.
+
+This behaviour is the same to functions, see:
+
+```kotlin
+package tests
+
+fun main() {
+    print(multiply(2, null))
+}
+
+fun multiply(num1: Int, x: Int?): Int {
+    var num2 = x
+    if (x == null) {
+        num2 = 1
+    }
+    return num1 * num2
+}
+```
+
+In this code above, we are checking if a variable have a null value and in this case setting its value to 1. You can't multiply a null.
