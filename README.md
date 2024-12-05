@@ -481,3 +481,5 @@ fun main() {
     
 }
 ```
+
+See this code in [Kotlin playground](https://pl.kotl.in/B09DquTKg)
