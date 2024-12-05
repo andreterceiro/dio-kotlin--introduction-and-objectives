@@ -440,3 +440,44 @@ Mutable stack (A)
 ```
 
 As you can see in the test, the type of the element in the stack is generic (he class is using generics kkk). Related of generics this is the main thing to observed. **varag** as exemple we already commented previously.
+
+
+## Generics in functions
+
+With help of the **"*"** operator we can pass al the parameters of an unknown size of a function to the constructor of a class and we used generics in the function also, see:
+
+```kotlin
+package tests
+
+class MutableStack<E>(vararg items: E) {
+    private val elements = items.toMutableList()
+
+    fun pop() = elements.removeAt(elements.size - 1)
+
+    override fun toString(): String = "Mutable stack (${elements.joinToString()})"
+}
+
+fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
+
+fun main() {
+    val integersStack = mutableStackOf(1, 2, 3)
+    println(integersStack)
+    
+    integersStack.pop()
+    println(integersStack)
+    
+    integersStack.pop()
+    println(integersStack)
+    
+    val stringStack = mutableStackOf("A", "B", "C")
+    
+    println(stringStack)
+    
+    stringStack.pop()
+    println(stringStack)
+    
+    stringStack.pop()
+    print(stringStack)
+    
+}
+```
