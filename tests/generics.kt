@@ -10,7 +10,7 @@ class MutableStack<E>(vararg items: E) {
 
 
 fun main() {
-    var integersStack = MutableStack(1, 2, 3)
+    val integersStack = MutableStack(1, 2, 3)
     println(integersStack)
     
     integersStack.pop()
@@ -19,7 +19,7 @@ fun main() {
     integersStack.pop()
     println(integersStack)
     
-    var stringStack = MutableStack("A", "B", "C")
+    val stringStack = MutableStack("A", "B", "C")
     
     println(stringStack)
     
