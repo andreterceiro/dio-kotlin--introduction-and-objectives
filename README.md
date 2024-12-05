@@ -254,3 +254,16 @@ fun main() {
 But only works because we seeted the type, the type was not infered by Kotlin. How to infer if we do not have a value? = error.
 
 
+## Dealing with nulls
+
+By default, if you set an initial value of a variable (**var**, or to a **val** also), you cannot set the value `null` to it, see:
+
+```kotlin
+package tests
+
+fun main() {
+    var a:String = "banana"
+    print(a)
+    a = null // <= Error if you try to assign null to a non-nullable variable
+}
+```
