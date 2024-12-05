@@ -280,3 +280,17 @@ fun main() {
 }```
 
 The difference occurs in the question mark after the type in the variable declaration.
+
+To enforce, this characteristics does no depends if you set the type of the variable or not, see:
+
+```kotlin
+package tests
+
+fun main() {
+    var a = "banana"
+    print(a)
+    a = null // <= Error if you try to assign null to a non-nullable variable
+}
+```
+
+In this example we used inference to define the type of the variable "a", but the error still occur.
