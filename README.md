@@ -482,4 +482,9 @@ fun main() {
 }
 ```
 
-See this code in [Kotlin playground](https://pl.kotl.in/B09DquTKg)
+See this code in [Kotlin playground](https://pl.kotl.in/B09DquTKg).
+
+
+## Tests of the teacher
+
+Please see [in this reposiory](https://github.com/digitalinnovationone/aprenda-kotlin-com-exemplos)
