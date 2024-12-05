@@ -314,3 +314,5 @@ fun multiply(num1: Int, x: Int?): Int {
 ```
 
 In this code above, we are checking if a variable have a null value and in this case setting its value to 1. You can't multiply a null.
+
+**Atention:** the resuting error is a compilation error, not a runtime error.
