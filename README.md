@@ -382,3 +382,7 @@ fun main() {
 ```
 
 See the declaration of the class. In the sabe line we specify that the constructor will receive 2 parameters and this parameters will be setted to properties.
+
+Remember these important points:
+- A property can be a **val** (immutable) and have no initial value. Then this value can be setted **1 time** in the constructor and never be changed. If it was a **var**, it can be changed in future;
+- To Kotin infer the type of the variable (or porperty) name you must specify a initial value (at least an empyt string - ""). Or you can specify the type like I did. 
