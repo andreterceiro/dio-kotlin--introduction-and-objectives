@@ -388,7 +388,7 @@ Remember these important points:
 - To Kotin infer the type of the variable (or porperty) name you must specify a initial value (at least an empyt string - ""). Or you can specify the type like I did.
 
 
-## Generics
+## Generics in classes
 
 See in the next example the use of <>:
 
